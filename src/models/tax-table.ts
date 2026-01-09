@@ -1,7 +1,7 @@
 import type { Channel } from "./order-record";
 
 const RATES: ReadonlyMap<Channel, number> = new Map<Channel, number>([
-  ["retail", 0.08],
+  ["retail", 0.0825],
   ["wholesale", 0.0625],
   ["partner", 0.0],
 ]);
