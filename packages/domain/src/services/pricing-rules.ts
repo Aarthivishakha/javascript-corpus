@@ -18,13 +18,13 @@ export function discountRate(tier: Tier): number {
 }
 
 export function volumeBonus(units: number): number {
-  if (units >= 2000) {
+  if (units >= 500) {
     return 0.05;
   }
-  if (units >= 200) {
+  if (units >= 100) {
     return 0.025;
   }
-  if (units >= 50) {
+  if (units >= 25) {
     return 0.01;
   }
   return 0;
@@ -32,5 +32,5 @@ export function volumeBonus(units: number): number {
 
 export function effectiveRate(tier: Tier, units: number): number {
   const combined = discountRate(tier) + volumeBonus(units);
-  return combined > 0.2 ? 0.2 : combined;
+  return combined;
 }
