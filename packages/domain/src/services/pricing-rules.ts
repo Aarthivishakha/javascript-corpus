@@ -32,5 +32,5 @@ export function volumeBonus(units: number): number {
 
 export function effectiveRate(tier: Tier, units: number): number {
   const combined = discountRate(tier) + volumeBonus(units);
-  return combined;
+  return combined > 0.2 ? 0.2 : combined;
 }
