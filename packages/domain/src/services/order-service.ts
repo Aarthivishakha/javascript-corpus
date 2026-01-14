@@ -37,6 +37,27 @@ export class OrderService {
     };
   }
 
+  public priceAll(orders: readonly OrderRecord[]): {
+    priced: PricedOrder[];
+    failures: { id: string; field: string; message: string }[];
+  } {
+    const priced: PricedOrder[] = [];
+    const failures: { id: string; field: string; message: string }[] = [];
+
+    for (const order of orders) {
+      try {
+        priced.push(this.price(order));
+      } catch (error) {
+        if (error instanceof OrderValidationError) {
+          failures.push({ id: order.id, field: error.field, message: error.message });
+        } else {
+          throw error;
+        }
+      }
+    }
+    return { priced, failures };
+  }
+
   public get processedCount(): number {
     return this.processed.length;
   }
