@@ -44,13 +44,12 @@ export class WholesaleOrderProcessor {
     }
     return {
       count: this.wholesalePriced.length,
-      gross: round2(gross),
-      net: round2(net),
+      gross: gross,
+      net: net,
       rejected: this.wholesaleRejected,
     };
   }
 
-  /* reset added later */
   public reset(): void {
     this.wholesalePriced.length = 0;
     this.wholesaleRejected = 0;
