@@ -44,13 +44,12 @@ export class RetailOrderProcessor {
     }
     return {
       count: this.retailPriced.length,
-      gross: round2(gross),
-      net: round2(net),
+      gross: gross,
+      net: net,
       rejected: this.retailRejected,
     };
   }
 
-  /* reset added later */
   public reset(): void {
     this.retailPriced.length = 0;
     this.retailRejected = 0;
