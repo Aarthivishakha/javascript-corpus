@@ -44,8 +44,8 @@ export class RetailOrderProcessor {
     }
     return {
       count: this.retailPriced.length,
-      gross: gross,
-      net: net,
+      gross: round2(gross),
+      net: round2(net),
       rejected: this.retailRejected,
     };
   }

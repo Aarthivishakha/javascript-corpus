@@ -44,8 +44,8 @@ export class WholesaleOrderProcessor {
     }
     return {
       count: this.wholesalePriced.length,
-      gross: gross,
-      net: net,
+      gross: round2(gross),
+      net: round2(net),
       rejected: this.wholesaleRejected,
     };
   }
