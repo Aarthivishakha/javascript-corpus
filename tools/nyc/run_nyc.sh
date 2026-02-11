@@ -4,6 +4,7 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$REPO_ROOT"
 mkdir -p reports
+# standardised runner preamble
 
 # Read a dependency's version WITHOUT require()-ing its package.json.
 # Modern packages declare an "exports" map that omits "./package.json", so
