@@ -55,4 +55,15 @@ public class PricingService {
         }
         return SHIPPING_FLAT_CENTS;
     }
+
+    public boolean isBulkOrder(Order order) {
+        int units = 0;
+        for (OrderLine line : order.getLines()) {
+            units += line.quantity();
+            if (units >= BULK_LINE_THRESHOLD) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

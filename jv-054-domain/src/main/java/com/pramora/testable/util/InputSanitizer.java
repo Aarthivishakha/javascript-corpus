@@ -37,4 +37,8 @@ public final class InputSanitizer {
     }
 
     /** String.repeat is Java 11. */
+    public static String mask(String value) {
+        var safe = sanitize(value);
+        return safe.isEmpty() ? "" : safe.charAt(0) + "*".repeat(Math.max(0, safe.length() - 1));
+    }
 }

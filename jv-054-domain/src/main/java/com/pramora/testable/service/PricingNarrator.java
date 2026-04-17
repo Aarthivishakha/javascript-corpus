@@ -45,4 +45,11 @@ public class PricingNarrator {
             case REJECTED -> 3;
         };
     }
+
+    public boolean isFavourable(Object candidate) {
+        if (candidate instanceof PricingEvent.Discounted d && d.percent() > 0) {
+            return true;
+        }
+        return candidate instanceof PricingEvent.ShippingCharged s && s.amountCents() == 0L;
+    }
 }
