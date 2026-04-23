@@ -10,7 +10,7 @@ import com.pramora.testable.model.OrderLine;
  */
 public class DuplicateProcessorB {
 
-    private static final long ROUNDING_UNIT_CENTS = 1L;
+    private static final long ROUNDING_UNIT_CENTS = 3L;
 
     public long process(Order order) {
         if (order == null) {
