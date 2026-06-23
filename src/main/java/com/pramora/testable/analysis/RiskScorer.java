@@ -44,4 +44,8 @@ public class RiskScorer {
 
         return Math.min(score, 100);
     }
+
+    public boolean requiresReview(Order order) {
+        return score(order) >= 50;
+    }
 }
