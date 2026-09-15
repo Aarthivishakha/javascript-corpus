@@ -1,4 +1,4 @@
-# Testable Java corpus — JV-054
+# Testable Java corpus — JV_V17_MAVEN_WAR_MICRO
 
 Grid cell `MVN-WAR-S` of the 24-cell Java grid.
 
@@ -10,7 +10,7 @@ below and not to the code the tool was pointed at.
 
 ## Branches
 
-This repository holds five orphan branches, one per grid cell. `main` carries the title
+This repository holds 432 orphan branches, one per grid cell across every Java version, build system and packaging combination in this corpus. `main` carries the title
 only. See `dataset.json` for the machine-readable description of this branch.
 
 ## Branch variables
