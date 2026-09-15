@@ -1,11 +1,9 @@
-# TypeScript Order Platform -- Monolith (TS-111)
+# TypeScript Order Platform -- Monolith (TS_V20_VITE_BUN_MONO)
 
 Tool-evaluation repository for **Node 20**, bundled with **vite**,
 managed with **bun**, in a **Monolith** layout.
 
-This is branch **TS-111** of `typescript-n12-001-005`. Node is held constant
-across all five branches; the package manager and the architecture are the
-variables.
+This is branch **TS_V20_VITE_BUN_MONO** of the consolidated `typescript-corpus` repository, which holds all 216 TypeScript branches across every Node version, bundler, package manager and architecture combination in this corpus.
 
 ## Project type
 
@@ -17,21 +15,6 @@ variables.
 - **Bundler:** Vite 2.9.18 (Rollup linker + its own esbuild 0.14.54 transform)
 - **Package manager:** bun 1.3.13
 - **Source root:** `src`
-
-## Branches
-
-`main` carries only the repository title. Every branch below holds the full
-project, and differs only in package manager and architecture:
-
-| Branch | Package manager | Architecture | Bundler |
-|---|---|---|---|
-| `TS-006` | pnpm 6.35.1 | Microservices | esbuild 0.21.5 |
-| `TS-007` | bun 1.4.0 | Monolith | esbuild 0.21.5 |
-| `TS-008` | bun 1.4.0 | Microservices | esbuild 0.21.5 |
-| `TS-009` | npm 8.19.4 | Monolith | Vite 2.9.18 |
-| `TS-010` | npm 8.19.4 | Microservices | Vite 2.9.18 |
-
-You are on **TS-111**.
 
 Node 12 is end-of-life, and that is deliberate: it pins the entire toolchain to
 the last release of each tool that still supports it. Every version in this
@@ -166,7 +149,7 @@ A CI file that only installs and tests would leave the declared tools unproven.
 ## Layout
 
 ```
-typescript-n12-001-005/  (TS-111)
+typescript-corpus/  (TS_V20_VITE_BUN_MONO)
 |-- .github/  (1 files)
 |-- src/  (15 files)
 |-- tests/  (5 files)
