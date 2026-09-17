@@ -1,0 +1,146 @@
+{
+  "id": "JS_V20_VITE_BUN_MICRO",
+  "productName": "GraniteMill",
+  "packageName": "granite-mill",
+  "domain": "Community garden plots",
+  "language": "JavaScript",
+  "node": "20.20.2",
+  "nodeFamily": 20,
+  "bundler": "Vite (built as esbuild)",
+  "packageManager": "bun",
+  "bundledNpm": "10.8.2",
+  "architecture": "Microservices",
+  "toolRosterVersion": "js-roster-v2-2026-09-16",
+  "uniqueMetrics": 103,
+  "metrics": [
+    {
+      "block": "Cyclomatic Complexity",
+      "metricCount": 6,
+      "primaryTool": "Lizard",
+      "primaryVersion": null,
+      "alternativeTool": "cyclomatic-complexity",
+      "alternativeVersion": "1.2.5",
+      "compatNotes": []
+    },
+    {
+      "block": "Cognitive Complexity",
+      "metricCount": 7,
+      "primaryTool": "eslint-plugin-sonarjs",
+      "primaryVersion": "4.2.1",
+      "alternativeTool": "cognitive-complexity-ts",
+      "alternativeVersion": "0.8.2",
+      "compatNotes": []
+    },
+    {
+      "block": "Code Duplication",
+      "metricCount": 7,
+      "primaryTool": "jscpd",
+      "primaryVersion": "5.2.1",
+      "alternativeTool": "Dolos",
+      "alternativeVersion": "2.9.3",
+      "compatNotes": []
+    },
+    {
+      "block": "Lint / Rule Violations",
+      "metricCount": 12,
+      "primaryTool": "eslint",
+      "primaryVersion": "10.10.0",
+      "alternativeTool": "oxlint",
+      "alternativeVersion": "1.83.0",
+      "compatNotes": []
+    },
+    {
+      "block": "Static Vulnerabilities (SAST)",
+      "metricCount": 7,
+      "primaryTool": "eslint-plugin-security",
+      "primaryVersion": "4.0.1",
+      "alternativeTool": "OpenGrep",
+      "alternativeVersion": null,
+      "compatNotes": []
+    },
+    {
+      "block": "Dependency Risk (SCA)",
+      "metricCount": 8,
+      "primaryTool": "npm audit + npm ls",
+      "primaryVersion": null,
+      "alternativeTool": "trivy",
+      "alternativeVersion": null,
+      "compatNotes": []
+    },
+    {
+      "block": "Statement Coverage",
+      "metricCount": 5,
+      "primaryTool": "nyc + mocha",
+      "primaryVersion": "18.0.0",
+      "alternativeTool": "monocart-coverage-reports",
+      "alternativeVersion": "2.13.0",
+      "compatNotes": []
+    },
+    {
+      "block": "Branch Coverage",
+      "metricCount": 7,
+      "primaryTool": "nyc + mocha",
+      "primaryVersion": "18.0.0",
+      "alternativeTool": "monocart-coverage-reports",
+      "alternativeVersion": "2.13.0",
+      "compatNotes": []
+    },
+    {
+      "block": "Path Coverage",
+      "metricCount": 10,
+      "primaryTool": "nyc + mocha (branch-coverage proxy)",
+      "primaryVersion": "18.0.0",
+      "alternativeTool": "monocart-coverage-reports",
+      "alternativeVersion": "2.13.0",
+      "compatNotes": [
+        "No JS-native path-coverage tool resolved; branch coverage used as a documented proxy."
+      ]
+    },
+    {
+      "block": "Mutation Score",
+      "metricCount": 7,
+      "primaryTool": "StrykerJS + Mocha",
+      "primaryVersion": "9.6.1",
+      "alternativeTool": "gutcheck",
+      "alternativeVersion": "0.10.0",
+      "compatNotes": []
+    },
+    {
+      "block": "Coverage Delta",
+      "metricCount": 6,
+      "primaryTool": "diff-cover",
+      "primaryVersion": null,
+      "alternativeTool": "monocart-coverage-reports",
+      "alternativeVersion": "2.13.0",
+      "compatNotes": []
+    },
+    {
+      "block": "All Definition Coverage",
+      "metricCount": 6,
+      "primaryTool": "ESLint (eslint-scope)",
+      "primaryVersion": "9.1.2",
+      "alternativeTool": "knip",
+      "alternativeVersion": "6.36.0",
+      "compatNotes": []
+    },
+    {
+      "block": "All Uses Coverage",
+      "metricCount": 10,
+      "primaryTool": "ESLint (eslint-scope)",
+      "primaryVersion": "9.1.2",
+      "alternativeTool": "knip",
+      "alternativeVersion": "6.36.0",
+      "compatNotes": []
+    },
+    {
+      "block": "Code Churn",
+      "metricCount": 5,
+      "primaryTool": "pydriller",
+      "primaryVersion": null,
+      "alternativeTool": "Git-Spark",
+      "alternativeVersion": "1.3.0",
+      "compatNotes": []
+    }
+  ],
+  "status": "generated"
+}
