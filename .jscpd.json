@@ -7,13 +7,7 @@
   "ignore": [
     "**/node_modules/**",
     "**/dist/**",
-    "**/coverage/**",
-    "**/report/**",
-    "**/package-lock.json",
-    "**/yarn.lock",
-    "**/pnpm-lock.yaml",
-    "**/bun.lockb",
-    "**/bun.lock"
+    "**/coverage/**"
   ],
   "absolute": true
 }

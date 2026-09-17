@@ -9,13 +9,5 @@
   "coverageAnalysis": "perTest",
   "mutate": [
     "packages/**/src/**/*.js"
-  ],
-  "mochaOptions": {
-    "spec": [
-      "packages/shared/tests/**/*.test.js"
-    ]
-  },
-  "plugins": [
-    "@stryker-mutator/mocha-runner"
   ]
 }
