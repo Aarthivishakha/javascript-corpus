@@ -1,42 +1,37 @@
-# javascript-combos
+# JS_V20_VITE_BUN_MONO
 
-Single GitHub repo for the JavaScript white-box combo corpus.
+Part of the `javascript-combos` white-box test-repo corpus (GraniteMill /
+`granite-mill`, domain: Community garden plots).
 
-Previously each Node version was split across four repos (`javascript-n12-001-016`, `017-032`, …). Every combo is now a **branch** in this repo.
+- **Node.js:** 20.20.2 (family V20)
+- **Bundler:** Vite (built as esbuild)
+- **Package manager:** bun
+- **Architecture:** Monolith
 
-## Branch naming
+The application code under `src/` (or `packages/*/src/` for Microservices
+branches) is byte-identical across all 576 branches of this corpus; only the
+build tool, package manager, architecture layout, and the resolved tool-pin
+table below vary.
 
-`CE-N{version}-{id}`
+## Resolved tool pins for Node 20
 
-- **version:** 12, 14, 16, 18, 20, 21, 22, 24, 26
-- **id:** `001`–`064` (bundler × package manager × architecture)
+| Block | Primary | Alternative |
+| --- | --- | --- |
+| Cyclomatic Complexity | Lizard | cyclomatic-complexity 1.2.5 |
+| Cognitive Complexity | eslint-plugin-sonarjs 4.2.1 | cognitive-complexity-ts 0.8.2 |
+| Code Duplication | jscpd 5.2.1 | Dolos 2.9.3 |
+| Lint / Rule Violations | eslint 10.10.0 | oxlint 1.83.0 |
+| Static Vulnerabilities (SAST) | eslint-plugin-security 4.0.1 | OpenGrep |
+| Dependency Risk (SCA) | npm audit + npm ls | trivy |
+| Statement Coverage | nyc + mocha 18.0.0 | monocart-coverage-reports 2.13.0 |
+| Branch Coverage | nyc + mocha 18.0.0 | monocart-coverage-reports 2.13.0 |
+| Path Coverage | nyc + mocha (branch-coverage proxy) 18.0.0 | monocart-coverage-reports 2.13.0 |
+| Mutation Score | StrykerJS + Mocha 9.6.1 | gutcheck 0.10.0 |
+| Coverage Delta | diff-cover | monocart-coverage-reports 2.13.0 |
+| All Definition Coverage | ESLint (eslint-scope) 9.1.2 | knip 6.36.0 |
+| All Uses Coverage | ESLint (eslint-scope) 9.1.2 | knip 6.36.0 |
+| Code Churn | pydriller | Git-Spark 1.3.0 |
 
-Example:
-
-```bash
-git clone https://github.com/BENNYameen/javascript-combos.git
-cd javascript-combos
-git checkout CE-N12-001
-```
-
-Direct URL: `https://github.com/BENNYameen/javascript-combos/tree/CE-N12-001`
-
-## Combo grid (64 per Node version)
-
-| IDs | Bundler | Package managers | Architecture |
-| --- | --- | --- | --- |
-| 001–008 | esbuild | npm, yarn (Berry), pnpm, bun | Monolith / Microservices |
-| 009–016 | Vite (built as esbuild) | same | same |
-| 017–024 | Webpack | same | same |
-| 025–032 | Rollup | same | same |
-| 033–040 | Rspack | same | same |
-| 041–048 | Parcel | same | same |
-| 049–056 | Turbopack | same | same |
-| 057–064 | SWC | same | same |
-
-Full index: [COMBOS.csv](COMBOS.csv) (576 rows).
-
-## Notes
-
-- Node **20** had no split GitHub repos yet. Those 64 branches exist here as placeholders from `main` until the stacks are filled in.
-- Other versions were copied from the original `javascript-n{ver}-001-016` … `049-064` repos.
+See `javascript-repos-build-contract.md` in the Testable (Tools) project for
+the full 103-metric roster, the repair notes, and the live pin-resolution
+method (npm registry `engines.node` ranges, prereleases excluded).
