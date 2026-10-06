@@ -21,6 +21,8 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!-- repo-level tools folder; the runners pass an absolute -Dtools.dir so this does not depend on where Maven thinks the project root is -->
+    <tools.dir>${maven.multiModuleProjectDirectory}/tools</tools.dir>
   </properties>
 
   <dependencies>
@@ -85,7 +87,7 @@
         <artifactId>maven-pmd-plugin</artifactId>
         <version>3.26.0</version>
         <configuration>
-          <rulesets><ruleset>${maven.multiModuleProjectDirectory}/tools/pmd/ruleset.xml</ruleset></rulesets>
+          <rulesets><ruleset>${tools.dir}/pmd/ruleset.xml</ruleset></rulesets>
           <targetJdk>17</targetJdk>
         </configuration>
         <dependencies>
@@ -97,7 +99,7 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
         <version>3.6.0</version>
-        <configuration><configLocation>${maven.multiModuleProjectDirectory}/tools/checkstyle/checkstyle.xml</configLocation></configuration>
+        <configuration><configLocation>${tools.dir}/checkstyle/checkstyle.xml</configLocation></configuration>
         <dependencies>
           <dependency><groupId>com.puppycrawl.tools</groupId><artifactId>checkstyle</artifactId><version>12.3.1</version></dependency>
         </dependencies>
@@ -107,7 +109,7 @@
         <artifactId>spotbugs-maven-plugin</artifactId>
         <version>4.8.6.6</version>
         <configuration>
-          <excludeFilterFile>${maven.multiModuleProjectDirectory}/tools/spotbugs/exclude.xml</excludeFilterFile>
+          <excludeFilterFile>${tools.dir}/spotbugs/exclude.xml</excludeFilterFile>
           <plugins>
             <plugin><groupId>com.h3xstream.findsecbugs</groupId><artifactId>findsecbugs-plugin</artifactId><version>1.14.0</version></plugin>
           </plugins>
